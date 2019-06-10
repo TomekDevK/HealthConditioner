@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    style="@style/AppTheme"
+    android:layout_height="match_parent"
+    tools:context=".CheckSensorsActivity">
+    <TextView
+        style="@style/Header1"
+        android:text="@string/check_sensors"/>
+
+    <LinearLayout
+        style="@style/BoxLayout"
+        android:layout_weight="1">
+        <Button
+            android:id="@+id/gravitySensorButton"
+            style="@style/ButtonStyle"
+            android:text="@string/gravity_sensor" />
+
+        <Button
+            android:id="@+id/linearAccelerometerButton"
+            style="@style/ButtonStyle"
+            android:text="@string/linear_accelerometer" />
+
+        <Button
+            android:id="@+id/rotationVectorSensorButton"
+            style="@style/ButtonStyle"
+            android:text="@string/rotation_vector_sensor" />
+
+        <Button
+            android:id="@+id/accelerometerButton"
+            style="@style/ButtonStyle"
+            android:text="@string/accelerometer" />
+
+        <Button
+            android:id="@+id/gyroscopeButton"
+            style="@style/ButtonStyle"
+            android:text="@string/gyroscope" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/returnButton"
+        style="@style/ReturnButton"
+        android:text="@string/return_button" />
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    style="@style/AppTheme"
+    android:layout_height="match_parent"
+    tools:context=".SensorActivity">
+    <TextView
+        style="@style/Header1"
+        android:text="@string/check_sensors"/>
+    <TextView
+        android:id="@+id/sensorHeader"
+        style="@style/Header2"/>
+    <LinearLayout
+        style="@style/BoxLayout"
+        android:layout_marginHorizontal="70dp"
+        android:layout_weight="1">
+        <LinearLayout
+            style="@style/BoxLayout">
+            <TextView
+                android:id="@+id/title1"
+                style="@style/TitleLayout"/>
+            <TextView
+                android:id="@+id/output1View"
+                style="@style/OutputOne" />
+        </LinearLayout>
+        <LinearLayout
+            style="@style/BoxLayout">
+            <TextView
+                android:id="@+id/title2"
+                style="@style/TitleLayout"/>
+            <TextView
+                android:id="@+id/output2View"
+                style="@style/OutputOne"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/BoxLayout">
+            <TextView
+                android:id="@+id/title3"
+                style="@style/TitleLayout" />
+            <TextView
+                android:id="@+id/output3View"
+                style="@style/OutputOne" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/sensor4"
+            style="@style/BoxLayout"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/title4"
+                style="@style/TitleLayout" />
+            <TextView
+                android:id="@+id/output4View"
+                style="@style/OutputOne" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/returnButton"
+        style="@style/ReturnButton"
+        android:text="@string/return_button" />
+</LinearLayout>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">HealthCondition</string>
+    <string name="start_test">Start Test</string>
+    <string name="return_button">Return</string>
+    <string name="settings">Settings</string>
+    <string name="check_sensors">Check Sensors</string>
+    <string name="health_condition_application">Health Condition Application</string>
+    <string name="gravity_sensor">Gravity Sensor</string>
+    <string name="gravity_x">Force of gravity along the x axis.</string>
+    <string name="gravity_y">Force of gravity along the y axis.</string>
+    <string name="gravity_z">Force of gravity along the z axis.</string>
+    <string name="linear_accelerometer">Linear Accelerometer</string>
+    <string name="linear_accelerometer_x">Acceleration force along the x axis (excluding  gravity).</string>
+    <string name="linear_accelerometer_y">Acceleration force along the y axis (excluding  gravity).</string>
+    <string name="linear_accelerometer_z">Acceleration force along the z axis (excluding  gravity).</string>
+    <string name="rotation_vector_sensor">Rotation Vector Sensor</string>
+    <string name="rotation_vector_x">Rotation vector component along the x axis (x * sin(θ/2)).</string>
+    <string name="rotation_vector_y">Rotation vector component along the y axis (y * sin(θ/2)).</string>
+    <string name="rotation_vector_z">Rotation vector component along the z axis (z * sin(θ/2)).</string>
+    <string name="rotation_vector_scalar_component">Scalar component of the rotation vector (cos(θ/2).</string>
+    <string name="accelerometer">Accelerometer</string>
+    <string name="accelerometer_x">Acceleration force along the x axis (including gravity).</string>
+    <string name="accelerometer_y">Acceleration force along the y axis (including gravity).</string>
+    <string name="accelerometer_z">Acceleration force along the z axis (including gravity).</string>
+    <string name="gyroscope">Gyroscope</string>
+    <string name="gyroscope_x">Rate of rotation around the x axis.</string>
+    <string name="gyroscope_y">Rate of rotation around the y axis.</string>
+    <string name="gyroscope_z">Rate of rotation around the z axis.</string>
+    <string name="no_sensor_available">No sensor available!</string>
+    <string name="check_db_connection">Check Connection</string>
+</resources>

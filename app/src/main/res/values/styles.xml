@@ -1,0 +1,79 @@
+<resources xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Header1" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textColor">#007FFF</item>
+        <item name="android:textSize">36dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Header2" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="OutputOne" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">26dp</item>
+        <item name="android:gravity">right</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:background">@drawable/defaultoutput</item>
+    </style>
+
+    <style name="BoxLayout" >
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="TitleLayout">
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">left</item>
+        <item name="android:maxLines">4</item>
+        <item name="android:inputType">textMultiLine</item>
+    </style>
+
+    <style name="ButtonStyle" parent="@android:style/Widget.Button">
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/defaultbutton</item>
+    </style>
+
+    <style name="ReturnButton"  parent="@android:style/Widget.Button">
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">bottom|left</item>
+        <item name="android:background">@drawable/defaultbutton</item>
+    </style>
+
+</resources>
