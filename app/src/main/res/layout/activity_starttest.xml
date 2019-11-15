@@ -11,7 +11,19 @@
         android:text="@string/start_test"/>
     <TextView
         style="@style/Header1"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:text="@string/start_test_description"/>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <Button
+            android:id="@+id/startTestButton"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            style="@style/ButtonStyle"
+            android:text="@string/start_test_button"/>
+    </RelativeLayout>
     <Button
         android:id="@+id/returnButton"
         style="@style/ReturnButton"

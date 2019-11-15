@@ -2,32 +2,47 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:background">@drawable/background</item>
+        <item name="android:fontFamily">@font/filsonsoftwregular</item>
+        <item name="android:actionBarStyle">@style/myThemeActionBar</item>
     </style>
 
-    <style name="Header1" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="android:textColor">#007FFF</item>
-        <item name="android:textSize">36dp</item>
+    <style name="myThemeActionBar" parent="@style/AppTheme">
+        <item name="background">@color/colorAccent</item>
+        <item name="fontFamily">@font/filsonsoftwregular</item>
+    </style>
+
+    <style name="LogoImage">
+        <item name="android:background">@drawable/logo_background</item>
+        <item name="android:layout_marginBottom">50dp</item>
+    </style>
+
+    <style name="Header1" >
+        <item name="android:textColor">@color/colorNextTwo</item>
+        <item name="android:textSize">20dp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:padding">10dp</item>
     </style>
 
-    <style name="Header2" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="Header2" >
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:textSize">30dp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center</item>
+        <item name="android:background">@color/transparent</item>
     </style>
 
-    <style name="OutputOne" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="OutputOne" >
         <item name="android:textColor">#000000</item>
         <item name="android:textSize">26dp</item>
         <item name="android:gravity">right</item>
@@ -44,36 +59,72 @@
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center</item>
         <item name="android:orientation">vertical</item>
+        <item name="android:background">@color/transparent</item>
     </style>
 
     <style name="TitleLayout">
         <item name="android:layout_marginLeft">5dp</item>
-        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textColor">@color/red</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">left</item>
         <item name="android:maxLines">4</item>
         <item name="android:inputType">textMultiLine</item>
+        <item name="android:background">@color/transparent</item>
     </style>
 
     <style name="ButtonStyle" parent="@android:style/Widget.Button">
-        <item name="android:layout_margin">5dp</item>
-        <item name="android:textSize">20dp</item>
-        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:layout_width">280dp</item>
         <item name="android:layout_height">50dp</item>
         <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:background">@drawable/defaultbutton</item>
     </style>
 
-    <style name="ReturnButton"  parent="@android:style/Widget.Button">
+    <style name="StartButtonStyle" parent="@android:style/Widget.Button">
         <item name="android:layout_margin">5dp</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:layout_width">260dp</item>
+        <item name="android:layout_height">75dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/text_shadow_white</item>
+        <item name="android:background">@drawable/defaultbutton</item>
+        <item name="android:layout_marginBottom">100dp</item>
+    </style>
+
+    <style name="ReturnButton"  parent="@android:style/Widget.Button">
+        <item name="android:textSize">14dp</item>
+        <item name="android:layout_margin">15dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_shadow_white</item>
+        <item name="android:layout_gravity">bottom|left</item>
+        <item name="android:background">@drawable/defaultbutton4</item>
+    </style>
+
+    <style name="TextBox" parent="android:Widget.TextView">
         <item name="android:textSize">18dp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:gravity">center</item>
-        <item name="android:layout_gravity">bottom|left</item>
-        <item name="android:background">@drawable/defaultbutton</item>
+        <item name="android:shadowColor">@color/text_shadow</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:background">@color/colorPrimary</item>
     </style>
 
+    <style name="defaultScrollView" >
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <style name="HeaderBar">
+        <item name="android:background">#303F9F</item>
+    </style>
 </resources>

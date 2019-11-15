@@ -75,4 +75,8 @@ public class CheckSensorsActivity extends AppCompatActivity {
 
 
     }
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(CheckSensorsActivity.this, MainActivity.class));
+    }
 }

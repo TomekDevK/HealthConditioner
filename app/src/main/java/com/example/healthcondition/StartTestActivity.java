@@ -13,9 +13,16 @@ public class StartTestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_starttest);
 
-        Button returnButton;
+        Button returnButton,startTestButton;
 
         //StartTest
+        startTestButton = findViewById(R.id.startTestButton);
+        startTestButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick( View v){
+                startActivity(new Intent(StartTestActivity.this, TestOne.class));
+            }
+        });
         returnButton = findViewById(R.id.returnButton);
         returnButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -24,7 +31,9 @@ public class StartTestActivity extends AppCompatActivity {
             }
         });
 
-
-
+    }
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(StartTestActivity.this, MainActivity.class));
     }
 }

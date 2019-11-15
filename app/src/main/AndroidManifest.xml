@@ -21,13 +21,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SettingsActivity">
-        </activity>
         <activity android:name=".CheckSensorsActivity">
         </activity>
         <activity android:name=".StartTestActivity">
         </activity>
         <activity android:name=".SensorActivity">
+        </activity>
+        <activity android:name=".TestOne">
         </activity>
     </application>
 

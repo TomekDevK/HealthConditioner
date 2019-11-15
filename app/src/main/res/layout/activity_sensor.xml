@@ -7,41 +7,52 @@
     android:layout_height="match_parent"
     tools:context=".SensorActivity">
     <TextView
+        android:layout_marginTop="50dp"
         style="@style/Header1"
         android:text="@string/check_sensors"/>
     <TextView
         android:id="@+id/sensorHeader"
-        style="@style/Header2"/>
+        style="@style/Header1"/>
     <LinearLayout
         style="@style/BoxLayout"
-        android:layout_marginHorizontal="70dp"
-        android:layout_weight="1">
+        android:layout_marginHorizontal="30dp"
+        android:layout_weight="10">
         <LinearLayout
             style="@style/BoxLayout">
             <TextView
                 android:id="@+id/title1"
+                android:background="@color/transparent"
                 style="@style/TitleLayout"/>
-            <TextView
+            <ScrollView
+                style="@style/defaultScrollView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"><TextView
                 android:id="@+id/output1View"
-                style="@style/OutputOne" />
+                style="@style/OutputOne" /></ScrollView>
         </LinearLayout>
         <LinearLayout
             style="@style/BoxLayout">
             <TextView
                 android:id="@+id/title2"
                 style="@style/TitleLayout"/>
-            <TextView
+            <ScrollView
+                style="@style/defaultScrollView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"><TextView
                 android:id="@+id/output2View"
-                style="@style/OutputOne"/>
+                style="@style/OutputOne"/></ScrollView>
         </LinearLayout>
         <LinearLayout
             style="@style/BoxLayout">
             <TextView
                 android:id="@+id/title3"
                 style="@style/TitleLayout" />
-            <TextView
+            <ScrollView
+                style="@style/defaultScrollView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"> <TextView
                 android:id="@+id/output3View"
-                style="@style/OutputOne" />
+                style="@style/OutputOne" /></ScrollView>
         </LinearLayout>
         <LinearLayout
             android:id="@+id/sensor4"
@@ -50,9 +61,11 @@
             <TextView
                 android:id="@+id/title4"
                 style="@style/TitleLayout" />
-            <TextView
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"><TextView
                 android:id="@+id/output4View"
-                style="@style/OutputOne" />
+                style="@style/OutputOne" /></ScrollView>
         </LinearLayout>
     </LinearLayout>
     <Button

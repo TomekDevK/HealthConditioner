@@ -6,29 +6,26 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import android.support.v7.widget.Toolbar;
+import android.support.v7.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity {
 
-
+    private Toolbar mTopToolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+//        mTopToolbar = findViewById(R.id.my_toolbar);
+//        setSupportActionBar(mTopToolbar);
+
         Button settingsButton;
-        Button checkSensorsButton;
         Button startTestButton;
 
         //Settings
         settingsButton = findViewById(R.id.settingsButton);
         settingsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick( View v){
-                startActivity(new Intent(MainActivity.this, SettingsActivity.class));
-            }
-        });
-        //CheckSensors
-        checkSensorsButton = findViewById(R.id.checkSensorsButton);
-        checkSensorsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick( View v){
                 startActivity(new Intent(MainActivity.this, CheckSensorsActivity.class));

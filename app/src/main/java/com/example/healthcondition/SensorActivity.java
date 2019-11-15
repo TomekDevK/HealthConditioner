@@ -26,13 +26,14 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
     private SensorManager sensorManager;
     private long lastUpdate;
     private static final String EXTRA_CONTEXT = "context";
+    private boolean start = false;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sensor);
 
         Bundle bundle = getIntent().getExtras();
-        Button returnButton;
+        Button returnButton,startButton;
 
         if (bundle != null) {
             layoutPicker = bundle.getInt(EXTRA_CONTEXT);
@@ -84,7 +85,11 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
                 startActivity(new Intent(SensorActivity.this, CheckSensorsActivity.class));
             }
         });
+    }
 
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(SensorActivity.this, MainActivity.class));
     }
 
     private void getGravityLayout(){
@@ -189,7 +194,7 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
     @Override
     public void onSensorChanged(SensorEvent event){
         long actualTime = System.currentTimeMillis();
-        if (actualTime - lastUpdate > 200) {
+        if (actualTime - lastUpdate > 300) {
             lastUpdate = actualTime;
             getSensorValue(event);
         }
