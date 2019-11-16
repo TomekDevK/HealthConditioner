@@ -28,11 +28,17 @@
     <string name="gyroscope_z">Rate of rotation around the z axis.</string>
     <string name="no_sensor_available">Sensor nie jest dostępny!</string>
     <string name="check_db_connection">Sprawdź połączenie</string>
+    <string name="start_test_header">Wprowadzenie</string>
     <string name="start_test_description">Za chwilę rozpoczniesz serię pięciu zadań. Test nie zajmie więcej niż 5 minut. Gdy będziesz gotowy naciśnij przycisk poniżej.</string>
     <string name="start_test_button">Rozpocznij test</string>
     <string name="test_one_header">Pomiar przyśpieszenia oraz drgań</string>
-    <string name="test_one_description">Zegnij rękę ze smartfonem w ręce o kąt 90° jak na obrazku poniżej</string>
-    <string name="test_one_button_text">Rozpocznij zadanie pierwsze</string>
-    <string name="test_one_in_progress">Test trwa</string>
+    <string name="test_one_description">Zegnij rękę o kąt 90° trzymając smartfon w ręce tak jak pokazano na obrazku</string>
     <string name="action_settings">Ustawienia</string>
+    <string name="task_one">Zadanie 1</string>
+    <string name="test_one_test_start">Rozpoczęto pomiar</string>
+    <string name="test_one_data_check">Sprawdzanie poprawności danych</string>
+    <string name="test_two_header">Pomiar dokładności i szybkości</string>
+    <string name="test_two">Zadanie 2</string>
+    <string name="test_two_description">Postaraj się jak najszybciej i najdokładniej narysować palcem na ekranie przedstawiony kształt</string>
+    <string name="test_two_button">START</string>
 </resources>

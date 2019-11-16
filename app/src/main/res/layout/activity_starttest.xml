@@ -7,23 +7,33 @@
     android:layout_height="match_parent"
     tools:context=".StartTestActivity">
     <TextView
-        style="@style/Header1"
-        android:text="@string/start_test"/>
-    <TextView
-        style="@style/Header1"
-        android:layout_weight="1"
-        android:text="@string/start_test_description"/>
-    <RelativeLayout
-        android:layout_width="fill_parent"
+        android:layout_marginTop="50dp"
+        style="@style/Header2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/start_test_header"/>
+    <LinearLayout
+        style="@style/BoxLayout"
+        android:layout_width="match_parent"
         android:layout_weight="1">
+        <LinearLayout
+            android:paddingHorizontal="55dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/WhiteBox">
+            <TextView
+                style="@style/Header2"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/start_test_description"/>
+        </LinearLayout>
         <Button
             android:id="@+id/startTestButton"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
             style="@style/ButtonStyle"
+            android:background="@drawable/defaultbutton3"
             android:text="@string/start_test_button"/>
-    </RelativeLayout>
+    </LinearLayout>
     <Button
         android:id="@+id/returnButton"
         style="@style/ReturnButton"

@@ -6,45 +6,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".TestOne">
 
     <TextView
+        android:paddingRight="75dp"
+        android:paddingLeft="75dp"
+        style="@style/Header2"
         android:layout_marginTop="50dp"
         android:id="@+id/testOneHeader"
-        style="@style/Header1"
         android:text="@string/test_one_header" />
     <LinearLayout
         android:id="@+id/testOneDescriptionLayout"
         style="@style/BoxLayout"
+        android:gravity="start"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingTop="80dp"
         >
-        <ImageView
-        android:id="@+id/bendingAnimation"
-        android:layout_width="700px"
-        android:layout_height="540px"/>
-        <TextView
-            style="@style/Header1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/test_one_description"/>
-        <Button
-            android:id="@+id/startTestButton"
-            android:layout_width="wrap_content"
-            android:layout_height= "wrap_content" />
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/testOneTestLayout"
-        android:visibility="gone"
-        style="@style/BoxLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/testOneInProgressDescription"
-            style="@style/Header1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/test_one_in_progress"/>
-    </LinearLayout>
 
+        <ImageView
+            android:id="@+id/bendingAnimation"
+            android:layout_marginHorizontal="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="540px"
+            android:layout_marginBottom="50dp"/>
+        <LinearLayout
+            android:paddingHorizontal="55dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/WhiteBox">
+            <TextView
+                style="@style/Header2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/task_one"/>
+            <TextView
+                style="@style/Header2"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/test_one_description"/>
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

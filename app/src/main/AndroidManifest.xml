@@ -29,6 +29,8 @@
         </activity>
         <activity android:name=".TestOne">
         </activity>
+        <activity android:name=".GoToTestTwo">
+        </activity>
     </application>
 
 </manifest>

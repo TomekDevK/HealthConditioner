@@ -33,7 +33,7 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
         setContentView(R.layout.activity_sensor);
 
         Bundle bundle = getIntent().getExtras();
-        Button returnButton,startButton;
+        Button returnButton;
 
         if (bundle != null) {
             layoutPicker = bundle.getInt(EXTRA_CONTEXT);
