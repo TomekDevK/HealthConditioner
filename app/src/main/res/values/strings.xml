@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">HEALTH CONDITION</string>
-    <string name="start_test">ROZPOCZNIJ\nTEST</string>
+    <string name="start_test">ROZPOCZNIJ TEST</string>
     <string name="return_button">POWRÓT</string>
     <string name="settings">USTAWIENIA</string>
     <string name="check_sensors">Sprawdź sensory</string>
@@ -41,4 +41,23 @@
     <string name="test_two">Zadanie 2</string>
     <string name="test_two_description">Postaraj się jak najszybciej i najdokładniej narysować palcem na ekranie przedstawiony kształt</string>
     <string name="test_two_button">START</string>
+    <string name="test_three_header">Koordynacja oko - ręka</string>
+    <string name="test_three">Zadanie 3</string>
+    <string name="test_three_description">Na ekranie pojawi się kilka okręgów. Przeciągnij palcem czerwoną kropkę na wszystkie okręgi w jak najkrótszym czasie.</string>
+    <string name="test_three_button">START</string>
+    <string name="test_four_header">Koordynacja oko - ręka</string>
+    <string name="test_four">Zadanie 4</string>
+    <string name="test_four_description">To zadanie jest podobne do poprzedniego. Kropki będą pojawiały się po kolei.\nPrzeciągnij palcem czerwoną kropkę na okrąg\nw jak najkrótszym czasie.</string>
+    <string name="test_four_button">START</string>
+    <string name="test_five_header">Test skojarzeń</string>
+    <string name="test_five">Zadanie 5</string>
+    <string name="test_five_description">Przeczytaj uważnie pytania i zaznacz poprawną odpowiedź.</string>
+    <string name="test_five_button">START</string>
+    <string name="test_five_question">Na rysunku znajduje się:</string>
+    <string name="result_header">Dziękujemy za wypełnienie testu!</string>
+    <string name="result_description">Zanim zakończysz zaznacz jedno z poniższych zdań:</string>
+    <string name="result_button">ZAKOŃCZ</string>
+    <string name="a">a. </string>
+    <string name="b">b. </string>
+    <string name="c">c. </string>
 </resources>

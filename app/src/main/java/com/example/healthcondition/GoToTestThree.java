@@ -19,10 +19,10 @@ public class GoToTestThree extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
-            data = (ArrayList<ArrayList<Float>>) bundle.getSerializable("Data");
+            data = (ArrayList<ArrayList<Float>>) bundle.getSerializable("data");
         }
 
-        Button startButton = findViewById(R.id.testTwoStartButton);
+        Button startButton = findViewById(R.id.testThreeStartButton);
 
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -71,7 +71,14 @@
         <item name="android:background">@drawable/default_white_box</item>
         <item name="android:padding">25dp</item>
     </style>
-
+    <style name="WhiteBoxNoPaddingMargin">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@drawable/default_white_box</item>
+    </style>
     <style name="TitleLayout">
         <item name="android:layout_marginLeft">5dp</item>
         <item name="android:textColor">@color/red</item>

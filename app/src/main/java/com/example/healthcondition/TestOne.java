@@ -183,7 +183,7 @@ public class TestOne extends AppCompatActivity implements SensorEventListener {
 
     }
     private void sendData(){
-        startActivity(new Intent(TestOne.this, GoToTestTwo.class).putExtra("Data", data));
+        startActivity(new Intent(TestOne.this, GoToTestTwo.class).putExtra("data", data));
     }
     private void checkSensorValue(SensorEvent event) {
         float[] values = event.values;

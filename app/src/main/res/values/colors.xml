@@ -15,4 +15,13 @@
     <color name="text_shadow_white">#FFFFFF</color>
     <color name="transparent">#00000000</color>
     <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="yellow">#FFFB00</color>
+    <color name="orange">#FF4800</color>
+    <color name="red1">#F00</color>
+    <color name="blue">#0000FF</color>
+    <color name="green">#0f0</color>
+    <color name="brown">#502102</color>
+    <color name="purple">#7600C0</color>
+    <color name="pink">#FF03DD</color>
 </resources>

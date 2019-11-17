@@ -31,6 +31,22 @@
         </activity>
         <activity android:name=".GoToTestTwo">
         </activity>
+        <activity android:name=".TestTwo">
+        </activity>
+        <activity android:name=".GoToTestThree">
+        </activity>
+        <activity android:name=".TestThree">
+        </activity>
+        <activity android:name=".GoToTestFour">
+        </activity>
+        <activity android:name=".TestFour">
+        </activity>
+        <activity android:name=".GoToTestFive">
+        </activity>
+        <activity android:name=".TestFive">
+        </activity>
+        <activity android:name=".Result">
+        </activity>
     </application>
 
 </manifest>

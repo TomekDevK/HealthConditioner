@@ -1,4 +1,6 @@
 package com.example.healthcondition;
 
-public class TestTwo {
+import android.support.v7.app.AppCompatActivity;
+
+public class TestTwo extends AppCompatActivity {
 }

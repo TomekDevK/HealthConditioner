@@ -19,15 +19,15 @@ public class GoToTestFive extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
-            data = (ArrayList<ArrayList<Float>>) bundle.getSerializable("Data");
+            data = (ArrayList<ArrayList<Float>>) bundle.getSerializable("data");
         }
 
-        Button startButton = findViewById(R.id.testTwoStartButton);
+        Button startButton = findViewById(R.id.testFiveStartButton);
 
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(GoToTestFive.this, GoToTestFour.class).putExtra("data", data));
+                startActivity(new Intent(GoToTestFive.this, TestFive.class).putExtra("data", data));
             }
         });
 
