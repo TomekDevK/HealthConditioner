@@ -1,23 +1,14 @@
 package com.example.healthcondition;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.ColorFilter;
-import android.graphics.LightingColorFilter;
-import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.content.res.AppCompatResources;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import java.util.ArrayList;
-import java.util.stream.IntStream;
 
 public class TestFive extends AppCompatActivity {
 
@@ -34,6 +25,12 @@ public class TestFive extends AppCompatActivity {
     private int [] answerColors = new int [3];
     private ImageView customShape;
     private TextView answerA, answerB, answerC;
+    private LinearLayout buttonA, buttonB, buttonC;
+    private float correctAnswers = 0;
+    private float wrongAnswers = 0;
+    private int questionsCtr = 0;
+    private float timeAnswers = 0;
+    private float startTime,endTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,13 +40,15 @@ public class TestFive extends AppCompatActivity {
         answerB = findViewById(R.id.testFiveAnswerB);
         answerC = findViewById(R.id.testFiveAnswerC);
 
+        buttonA = findViewById(R.id.testFiveButtonA);
+        buttonB = findViewById(R.id.testFiveButtonB);
+        buttonC = findViewById(R.id.testFiveButtonC);
+
         customShape = findViewById(R.id.testFiveImage);
         createShapeArrays();
         createColorArrays();
 
         generateTest();
-
-        Button testButton = findViewById(R.id.testButton);
 
         Bundle bundle = getIntent().getExtras();
 
@@ -57,14 +56,55 @@ public class TestFive extends AppCompatActivity {
             data = (ArrayList<ArrayList<Float>>) bundle.getSerializable("data");
         }
 
-
-        testButton.setOnClickListener(new View.OnClickListener() {
+        buttonA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(TestFive.this, Result.class));
+                if(answerNumber == 0){
+                    correctAnswers++;
+                }else{
+                    wrongAnswers++;
+                }
+                if(questionsCtr >4){
+                    endTime = System.nanoTime();
+                    sendDate();
+                }else{
+                    generateTest();
+                }
             }
         });
-
+        buttonB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(answerNumber == 1){
+                    correctAnswers++;
+                }else{
+                    wrongAnswers++;
+                }
+                if(questionsCtr >4){
+                    endTime = System.nanoTime();
+                    sendDate();
+                }else{
+                    generateTest();
+                }
+            }
+        });
+        buttonC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(answerNumber == 2){
+                    correctAnswers++;
+                }else{
+                    wrongAnswers++;
+                }
+                if(questionsCtr >4){
+                    endTime = System.currentTimeMillis();
+                    sendDate();
+                }else{
+                    generateTest();
+                }
+            }
+        });
+        startTime = System.currentTimeMillis();
     }
 
     private void createShapeArrays (){
@@ -100,6 +140,7 @@ public class TestFive extends AppCompatActivity {
 
     }
     private void generateTest () {
+        questionsCtr++;
         generateColorsShapes();
         int z = answerNumber;
         customShape.setImageResource(shapeArray[testShape[answerNumber]]);
@@ -159,15 +200,19 @@ public class TestFive extends AppCompatActivity {
     }
 
     private void sendDate () {
-
+        timeAnswers=endTime-startTime;
+        data.add(new ArrayList<Float>());
+        data.get(3).add(timeAnswers);
+        data.get(3).add(correctAnswers);
+        data.get(3).add(wrongAnswers);
+        goToResult();
     }
 
     private void goToResult(){
-        startActivity(new Intent(TestFive.this, Result.class));
+        startActivity(new Intent(TestFive.this, Result.class).putExtra("data",data));
     }
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(TestFive.this, GoToTestFive.class));
     }
 }

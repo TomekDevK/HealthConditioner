@@ -45,6 +45,9 @@
     <string name="test_three">Zadanie 3</string>
     <string name="test_three_description">Na ekranie pojawi się kilka okręgów. Przeciągnij palcem czerwoną kropkę na wszystkie okręgi w jak najkrótszym czasie.</string>
     <string name="test_three_button">START</string>
+    <string name="test_three_repeat_button">POWTÓRZ</string>
+    <string name="test_three_next_button">DALEJ</string>
+    <string name="test_three_time">Czas:</string>
     <string name="test_four_header">Koordynacja oko - ręka</string>
     <string name="test_four">Zadanie 4</string>
     <string name="test_four_description">To zadanie jest podobne do poprzedniego. Kropki będą pojawiały się po kolei.\nPrzeciągnij palcem czerwoną kropkę na okrąg\nw jak najkrótszym czasie.</string>

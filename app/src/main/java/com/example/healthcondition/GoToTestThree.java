@@ -27,7 +27,7 @@ public class GoToTestThree extends AppCompatActivity {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(GoToTestThree.this, GoToTestFour.class).putExtra("data", data));
+                startActivity(new Intent(GoToTestThree.this, TestThree.class).putExtra("data", data));
             }
         });
 

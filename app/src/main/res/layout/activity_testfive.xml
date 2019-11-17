@@ -32,6 +32,7 @@
             android:text="@string/test_five_question"
             android:layout_margin="25dp"/>
         <LinearLayout
+            android:id="@+id/testFiveButtonA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -51,6 +52,7 @@
                 android:layout_height="wrap_content"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/testFiveButtonB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -71,6 +73,7 @@
                 android:layout_height="wrap_content"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/testFiveButtonC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/WhiteBoxNoPaddingMargin"
@@ -90,9 +93,5 @@
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"/>
     </LinearLayout>
-        <Button
-            android:id="@+id/testButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
     </LinearLayout>
 </LinearLayout>

@@ -125,7 +125,18 @@
         <item name="android:layout_gravity">bottom|left</item>
         <item name="android:background">@drawable/defaultbutton4</item>
     </style>
-
+    <style name="NextButton"  parent="@android:style/Widget.Button">
+        <item name="android:textSize">14dp</item>
+        <item name="android:layout_margin">15dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_shadow_white</item>
+        <item name="android:layout_gravity">bottom|left</item>
+        <item name="android:background">@drawable/nextbutton</item>
+    </style>
     <style name="TextBox" parent="android:Widget.TextView">
         <item name="android:textSize">18dp</item>
         <item name="android:layout_width">wrap_content</item>

@@ -1,6 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/app_name"
+        android:background="@drawable/filled_circle"/>
+
+    <ImageView
+        android:id="@+id/image_to_reach1"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/empty_circle"
+        android:contentDescription="@string/app_name" />
+    <ImageView
+        android:id="@+id/image_to_reach2"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/empty_circle"
+        android:contentDescription="@string/app_name" />
+    <ImageView
+        android:id="@+id/image_to_reach3"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/empty_circle"
+        android:contentDescription="@string/app_name" />
+    <ImageView
+        android:id="@+id/image_to_reach4"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/empty_circle"
+        android:contentDescription="@string/app_name" />
+    <ImageView
+        android:id="@+id/image_to_reach5"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/empty_circle"
+        android:contentDescription="@string/app_name" />
+    <ImageView
+        android:id="@+id/image_to_reach6"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/empty_circle"
+        android:contentDescription="@string/app_name" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="50dp"
+        android:background="@color/transparent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:textSize="20dp"
+            android:paddingRight="5dp"
+            android:height="30dp"
+            android:gravity="center"
+            android:text="@string/test_three_time"
+        />
+        <TextView
+            android:id="@+id/test_three_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:height="30dp"
+            android:width="100dp"
+            android:textColor="@color/black"
+            style="@style/WhiteBoxNoPaddingMargin"
+            />
+    </LinearLayout>
+    <Button
+        android:id="@+id/repeatButton"
+        style="@style/ReturnButton"
+        android:layout_width="150dp"
+        android:text="@string/test_three_repeat_button"
+        android:layout_alignParentBottom="true" />
+    <Button
+        android:id="@+id/nextButton"
+        style="@style/NextButton"
+        android:layout_width="150dp"
+        android:text="@string/test_three_next_button"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true" />
+    <ImageView
+        android:id="@+id/image_not_existing"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/app_name" />
+</RelativeLayout>
