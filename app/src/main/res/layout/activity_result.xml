@@ -18,26 +18,90 @@
         style="@style/BoxLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/myImageViewText"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_margin="1dp"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="Loading...."
+            android:textColor="#000000" />
         <LinearLayout
+            style="@style/WhiteBoxNoPaddingMargin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/WhiteBoxNoPaddingMargin"
             android:layout_marginHorizontal="25dp"
             android:paddingHorizontal="18dp"
             android:paddingVertical="10dp">
             <TextView
                 style="@style/Header2"
-                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/result_description"/>
+                android:text="@string/result_description"
+                android:textColor="@color/black" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_gravity="left"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginVertical="2dp"
+            android:background="@color/transparent"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/chbox1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginVertical="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/check_box_selector"
+                android:button="@null"
+                android:gravity="center_vertical"
+                android:textColor="#FF000000"
+                android:textSize="13dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:background="@color/transparent"
+                android:gravity="left"
+                android:text="@string/final_text_one" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginVertical="2dp"
+            android:background="@color/transparent"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/chbox2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginVertical="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/check_box_selector"
+                android:button="@null"
+                android:gravity="center_vertical"
+                android:textColor="#FF000000"
+                android:textSize="13dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:background="@color/transparent"
+                android:gravity="left"
+                android:text="@string/final_text_two" />
         </LinearLayout>
         <Button
-            android:layout_margin="70dp"
             android:id="@+id/finishButton"
             style="@style/StartButtonStyle"
             android:layout_width="200dp"
+            android:layout_margin="30dp"
             android:background="@drawable/startbutton"
-            android:text="@string/result_button"/>
+            android:text="@string/result_button" />
     </LinearLayout>
 </LinearLayout>

@@ -1,6 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-</android.support.constraint.ConstraintLayout>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    style="@style/AppTheme"
+    android:layout_height="match_parent"
+    tools:context=".TestTwo">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/WhiteBoxNoPaddingMargin"
+        android:layout_marginVertical="25dp"
+        android:layout_marginHorizontal="25dp"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="10dp">
+        <TextView
+            style="@style/Header2"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/test_two_test_description"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:layout_weight="1">
+        <ImageView
+            android:id="@+id/imageView"
+            android:src="@drawable/spiral"
+            android:background="@color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </ImageView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:background="@color/transparent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:textSize="20dp"
+            android:paddingRight="5dp"
+            android:height="30dp"
+            android:gravity="center"
+            android:text="@string/test_three_time"
+            />
+        <TextView
+            android:id="@+id/test_two_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:height="30dp"
+            android:width="100dp"
+            android:textColor="@color/black"
+            style="@style/WhiteBoxNoPaddingMargin"
+            />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:background="@color/transparent">
+        <Button
+            android:id="@+id/repeatButton_test2"
+            style="@style/ReturnButton"
+            android:layout_width="150dp"
+            android:text="@string/test_two_repeat_button"
+            android:layout_alignParentBottom="true"/>
+        <Button
+            android:id="@+id/nextButton_test2"
+            style="@style/NextButton"
+            android:layout_width="150dp"
+            android:text="@string/test_two_next_button"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</LinearLayout>

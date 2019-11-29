@@ -142,7 +142,6 @@ public class TestFive extends AppCompatActivity {
     private void generateTest () {
         questionsCtr++;
         generateColorsShapes();
-        int z = answerNumber;
         customShape.setImageResource(shapeArray[testShape[answerNumber]]);
         customShape.setColorFilter(ContextCompat.getColor(TestFive.this, colorArray[testColor[answerNumber]]));
 
@@ -202,9 +201,9 @@ public class TestFive extends AppCompatActivity {
     private void sendDate () {
         timeAnswers=endTime-startTime;
         data.add(new ArrayList<Float>());
-        data.get(3).add(timeAnswers);
-        data.get(3).add(correctAnswers);
-        data.get(3).add(wrongAnswers);
+        data.get(6).add(timeAnswers);
+        data.get(6).add(correctAnswers);
+        data.get(6).add(wrongAnswers);
         goToResult();
     }
 

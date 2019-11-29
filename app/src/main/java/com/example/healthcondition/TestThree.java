@@ -3,9 +3,7 @@ package com.example.healthcondition;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
-import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,9 +11,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class TestThree extends AppCompatActivity {
 
@@ -28,8 +27,10 @@ public class TestThree extends AppCompatActivity {
     private int xDelta;
     private int yDelta;
     private ImageView [] imageToReachId = new ImageView[6];
-    private TextView testThreeTimer;
-    private float time;
+    private int timeStart,tempMilis=0,tempSecond=0,tempMin=0;
+    private int completedCircles=0;
+    private Timer t = new Timer();
+    private boolean timerStart = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,19 +53,15 @@ public class TestThree extends AppCompatActivity {
         imageToReachId[4] = imageToReach5;
         imageToReachId[5] = imageToReach6;
 
-        testThreeTimer = findViewById(R.id.test_three_timer);
-        time = System.currentTimeMillis();
         nextButton = findViewById(R.id.nextButton);
         repeatButton = findViewById(R.id.repeatButton);
-
-        setTimerTask();
 
         Bundle bundle = getIntent().getExtras();
 
         if (bundle != null) {
             data = (ArrayList<ArrayList<Float>>) bundle.getSerializable("data");
         }
-
+        data.add(new ArrayList<Float>());
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,6 +75,7 @@ public class TestThree extends AppCompatActivity {
                 startActivity(new Intent(TestThree.this, TestThree.class).putExtra("data", data));
             }
         });
+        nextButton.setEnabled(false);
 
         image.setOnTouchListener(onTouchListener());
         image.post(new Runnable() {
@@ -90,19 +88,6 @@ public class TestThree extends AppCompatActivity {
     }
 
 
-    private void setTimerTask() {
-        new CountDownTimer(30000, 100) {
-
-            public void onTick(long millisUntilFinished) {
-                float timer = System.currentTimeMillis();
-                testThreeTimer.setText(String.format("%.2f",timer-time));
-            }
-
-            public void onFinish() {
-            }
-
-        }.start();
-    }
 
 
     private View.OnTouchListener onTouchListener() {
@@ -118,6 +103,31 @@ public class TestThree extends AppCompatActivity {
                 switch (event.getAction() & MotionEvent.ACTION_MASK) {
 
                     case MotionEvent.ACTION_DOWN:
+
+                        if(timerStart){
+                            timeStart = (int) System.currentTimeMillis();
+                            t.scheduleAtFixedRate(new TimerTask() {
+
+                            @Override
+                            public void run() {
+                                runOnUiThread(new Runnable() {
+
+                                    @Override
+                                    public void run() {
+                                        long timeNow = System.currentTimeMillis();
+                                        TextView testThreeTimer =  findViewById(R.id.test_three_timer);
+                                        tempMin = (int) (timeNow-timeStart)/60000;
+                                        tempSecond = (int)(timeNow-timeStart-tempMin*60000)/1000 ;
+                                        tempMilis = (int)(timeNow-timeStart-tempMin*60000-tempSecond*1000) ;
+                                        testThreeTimer.setText(String.valueOf(tempMin)+":"+String.valueOf(tempSecond)+":"+String.valueOf(tempMilis));
+                                    }
+
+                                });
+                                }
+
+                            }, 0, 100);
+                            timerStart=false;
+                        }
                         RelativeLayout.LayoutParams lParams = (RelativeLayout.LayoutParams)
                                 view.getLayoutParams();
 
@@ -143,9 +153,14 @@ public class TestThree extends AppCompatActivity {
                             {
                                 imageToReachId[i].setVisibility(View.GONE);
                                 imageToReachId[i]=imageNotExisting;
-                                Toast.makeText(TestThree.this,
-                                        "Dopasowane kółko", Toast.LENGTH_SHORT)
-                                        .show();
+                                completedCircles++;
+                                if(!(completedCircles<6)){
+                                    t.cancel();
+                                    t.purge();
+                                    float timeFinish = System.currentTimeMillis();
+                                    data.get(4).add(timeFinish-timeStart);
+                                    nextButton.setEnabled(true);
+                                }
                             }
                         }
                         break;
@@ -155,16 +170,15 @@ public class TestThree extends AppCompatActivity {
             }
         };
     }
+
     private void generateRandomViews (){
 
         int[][] circleArray = new int[6][2];
-        DisplayMetrics displayMetrics = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int ctr =0;
 
         while(ctr <6){
             int testx = getRandom(179,901);
-            int testy = getRandom(200,1500);
+            int testy = getRandom(250,1500);
             if(!circleOverlay(circleArray,testx,testy)){
                 circleArray[ctr][0] = testx;
                 circleArray[ctr][1] = testy;

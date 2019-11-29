@@ -7,11 +7,18 @@
             <solid android:color="#696969"/>
         </shape>
     </item>
-    <item >
+    <item android:state_enabled="true">
         <shape android:shape="rectangle" >
             <corners android:radius="10dip" />
             <stroke android:width="5dip" android:color="#5e7974" />
             <solid android:color="#ffffff" />
+        </shape>
+    </item>
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle" >
+            <corners android:radius="10dip" />
+            <stroke android:width="5dip" android:color="#5e7974" />
+            <solid android:color="#4B4949" />
         </shape>
     </item>
 </selector>

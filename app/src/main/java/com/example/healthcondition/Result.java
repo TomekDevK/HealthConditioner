@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 
 import java.util.ArrayList;
 
@@ -19,10 +20,10 @@ public class Result extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
-            data = (ArrayList<ArrayList<Float>>) bundle.getSerializable("Data");
+            data = (ArrayList<ArrayList<Float>>) bundle.getSerializable("data");
         }
 
-        Button finishButton = findViewById(R.id.finishButton);
+        final Button finishButton = findViewById(R.id.finishButton);
 
         finishButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +32,32 @@ public class Result extends AppCompatActivity {
             }
         });
 
+        finishButton.setEnabled(false);
+        final CheckBox chbox1 = findViewById(R.id.chbox1);
+        final CheckBox chbox2 = findViewById(R.id.chbox2);
+
+        chbox1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(chbox1.isChecked()) {
+                    chbox2.setChecked(false);
+                    finishButton.setEnabled(true);
+                }else{
+                    finishButton.setEnabled(false);
+                }
+            }
+        });
+        chbox2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(chbox2.isChecked()) {
+                    chbox1.setChecked(false);
+                    finishButton.setEnabled(true);
+                }else{
+                    finishButton.setEnabled(false);
+                }
+            }
+        });
     }
 
     @Override

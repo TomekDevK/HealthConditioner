@@ -41,6 +41,10 @@
     <string name="test_two">Zadanie 2</string>
     <string name="test_two_description">Postaraj się jak najszybciej i najdokładniej narysować palcem na ekranie przedstawiony kształt</string>
     <string name="test_two_button">START</string>
+    <string name="test_two_timer">Czas:</string>
+    <string name="test_two_test_description">Podczas rysowania nie\nodrywaj palca od ekranu.\nZacznij rysowanie od środka spirali kiedy będziesz gotowy.\nW razie problemów powtórz test.</string>
+    <string name="test_two_repeat_button">POWTÓRZ</string>
+    <string name="test_two_next_button">DALEJ</string>
     <string name="test_three_header">Koordynacja oko - ręka</string>
     <string name="test_three">Zadanie 3</string>
     <string name="test_three_description">Na ekranie pojawi się kilka okręgów. Przeciągnij palcem czerwoną kropkę na wszystkie okręgi w jak najkrótszym czasie.</string>
@@ -63,4 +67,6 @@
     <string name="a">a. </string>
     <string name="b">b. </string>
     <string name="c">c. </string>
+    <string name="final_text_one">Cierpię na chorobę neurodegeneracyjną lub\nmiaem w przeszłości uraz neurologiczny.</string>
+    <string name="final_text_two">Nie miałem w przeszłości\nżadnych urazów\nneurologicznych.</string>
 </resources>
